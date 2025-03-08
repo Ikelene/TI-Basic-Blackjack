@@ -8,6 +8,20 @@ To install, simply drag the file into your calculator using the TI-Connect app.
 
 You do not need to [Jailbreak](https://calcplex.com/ti84plusce-jailbreak-tutorial/) your calculator, just press PRGM > TI-Basic > BJ and the program should run! Have fun gambling! 🤞
 
+## Compatibility
+
+| Calculator    | Compatible?   |
+| ------------- | ------------- |
+| TI-84 Plus family  | ✅ |
+| TI-83 Plus family  | ❓ |
+| TI-83 & 84 family  | ❓ |
+| TI-Nspire CX  | ❓ |
+| TI-Nspire CX II family | ❓ |
+| TI-55 II | ❓ |
+| TI-55 III | ❓ |
+| TI-56 | ❓ |
+| TI-74S | ❓ |
+
 # Playing
 ## Placing a bid
 When you first run the program, you will be able to choose a bid.
