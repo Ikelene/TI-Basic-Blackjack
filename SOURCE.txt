@@ -1,0 +1,151 @@
+round(M,2)→M
+If M=0
+Then
+Disp "STATS RESET"
+30→M
+1→R
+30→V
+0→W
+End
+If K=0
+Then
+99999999999999999→B
+Disp "2ND+MODE TO QUIT"
+While B>M
+Disp "BALANCE:",M
+Input "BET AMOUNT: ",B
+If B>M
+Then
+Disp "YOU CANT BET MORE THAN"
+Disp "YOU CURRENTLY HAVE"
+End
+End
+Else
+Disp "BALANCE:",M
+Disp "1. 1/4 OF BAL"
+Disp "2. HALF"
+Disp "3. 3/4 OF BAL"
+Disp "4. ALL IN"
+Input "",O
+If O=1
+Then
+M/4→B
+End
+If O=2
+Then
+M/2→B
+End
+If O=3
+Then
+(M/4)*3→B
+End
+If O=4
+Then
+M→B
+End
+End
+ClrHome
+round(B,2)→B
+0→A
+Disp "1"
+While A≠3
+randInt(1,21)→D
+randInt(1,21)→H
+2→E
+0→Z
+Disp "2"
+1→Z
+While Z≠0
+ClrHome
+Disp "ROUND:",R
+Disp "DEALERS HAND:",D
+Disp "YOUR HAND:",H
+Disp "1. HIT"
+Disp "2. STAND"
+Input "",A
+If A=1
+Then
+H+randInt(1,13)→H
+If H=21
+Then
+Disp "BLACKJACK"
+W+1→W
+B*2→B
+Disp "BLACKJACK, YOU WON:",B
+M+B→M
+0→Z
+End
+If H>21
+Then
+0→Z
+ClrHome
+Disp "YOU BUSTED AND LOST",B
+M-B→M
+0→B
+End
+Else
+If H≥D
+Then
+Repeat D>H or E=4
+ClrHome
+Disp "DEALER IS DRAWING..."
+Disp "DEALERS HAND:",D
+Disp "YOUR HAND:",H
+Wait 1
+D+randInt(1,13)→D
+E+1→E
+End
+If D>21
+Then
+ClrHome
+Disp "DEALER BUSTED, YOU WON",B*2
+W+1→W
+M+B→M
+0→B
+0→Z
+Else
+If D>H
+Then
+ClrHome
+Disp "DEALER WON, YOU LOST",B
+M-B→M
+0→B
+0→Z
+Else
+ClrHome
+B*2→B
+Disp "YOU WON",B
+M+B→M
+0→B
+0→Z
+End
+End
+End
+End
+End
+Disp "DEALERS HAND:",D
+Disp "YOUR HAND:",H
+Disp "YOUR BALANCE:",M
+Disp "ENTER TO CONTINUE"
+Pause 
+If M=0
+Then
+ClrHome
+Disp "=========================="
+Disp "         GAME OVER"
+Disp "    YOU LOST EVERYTHING!"
+Disp "=========================="
+Disp "ROUNDS PLAYED:",R
+Disp "HIGHEST AMOUNT HELD",V
+Pause 
+(W/R)*100→W
+Disp "WIN PERCENTAGE:",W
+0→N
+Else
+R+1→R
+If M>V
+Then
+M→V
+End
+prgmBJ
+End
