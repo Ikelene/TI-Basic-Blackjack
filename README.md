@@ -9,6 +9,7 @@ To install, simply drag the file into your calculator using the TI-Connect app.
 You do not need to [Jailbreak](https://calcplex.com/ti84plusce-jailbreak-tutorial/) your calculator, just press PRGM > TI-Basic > BJ and the program should run! Have fun gambling! 🤞
 
 ## Compatibility
+Please **report** any bugs in the Issues tab on Github.
 
 | Calculator    | Compatible?   |
 | ------------- | ------------- |
